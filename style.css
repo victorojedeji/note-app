@@ -169,6 +169,7 @@ body {
 .elipsis {
     margin-left: 1.2em;
     width: 10%;
+    filter: invert(70%);
 }
 
 .description {
