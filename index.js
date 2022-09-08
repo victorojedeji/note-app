@@ -26,6 +26,6 @@ function show() {
 
 
 function appear() {
-    // main.classList.add("appear")
-    console.log(this.e.target)
+    main.classList.add("appear")
+    // console.log(this.e.target)
 }

@@ -193,7 +193,7 @@ body {
 
 .del-edit {
     position: absolute;
-    background: white;
+    background: #272c2d;
     right: 0;
     top: 0;
     z-index: 1;
@@ -211,16 +211,32 @@ body {
     align-items: center;
     text-transform: capitalize;
     gap: .2em;
+    font-size: .9rem;
+    transition: all .2s ease-out;
 }
 
 .edit-img,
 .del-img {
     width: 1rem;
+    filter: invert(70%);
 }
 
 .toggle:hover {
-    background: #ccc;
-    border-bottom: 1px solid black;
+    background: #1d2122;
+    border-bottom: 1px solid #353a3c;
+    border-left: 1px solid #353a3c;
+    /* border-right: 1px solid #353a3c; */
+    color: #fff;
+}
+
+.toggle:active {
+    transform: scale(.98);
+}
+
+
+.toggle:hover .edit-img,
+.toggle:hover .del-img{
+    filter: invert(100%);
 }
 
 /* @media (min-width:300px) {
