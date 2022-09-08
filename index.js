@@ -1,12 +1,14 @@
 let main = document.querySelector(".main"),
 filterLogo = document.querySelector(".filter-img"),
 searchFilter =document.querySelector("#search"),
-elipsisBtn = document.querySelector(".elipsis");
+elipsisBtn = document.querySelectorAll(".elipsis");
 
 
 
  filterLogo.addEventListener("click", show)
- elipsisBtn.addEventListener("click", appear)
+ elipsisBtn.forEach(item => {
+    item.addEventListener("click", appear);
+ })
 let increment = 0;
 function show() {
     increment = increment + 1;
@@ -24,5 +26,6 @@ function show() {
 
 
 function appear() {
-    main.classList.add("appear")
+    // main.classList.add("appear")
+    console.log(this.e.target)
 }
