@@ -18,14 +18,16 @@ body {
 .header {
     padding-left: .5em;
     margin-top: .4em;
+    color: #ffffff;
 }
 
 .main {
     width: 90%;
-    background: blue;
-    max-width: 40rem;
-    min-width: 20rem;
+    max-width: 400px;
+    min-width: 250px;
     position: relative;
+    background: #202628;
+    border-radius: .5em;
 }
 
 .wrapper {
@@ -108,6 +110,7 @@ body {
     top: 1em;
     right: 1em;
     width: 7%;
+    filter: invert(100%);
 }
 
 .filter {
@@ -151,3 +154,10 @@ body {
     background: #ccc;
     border-bottom: 1px solid black;
 }
+
+/* @media (min-width:300px) {
+
+    body {
+        display: none;
+    }
+} */
