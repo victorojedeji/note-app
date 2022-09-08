@@ -15,12 +15,6 @@ body {
     min-height: 100vh;
 }
 
-.header {
-    padding-left: .5em;
-    margin-top: .4em;
-    color: #ffffff;
-}
-
 .main {
     width: 90%;
     max-width: 400px;
@@ -30,79 +24,19 @@ body {
     border-radius: .5em;
 }
 
+.header {
+    padding-left: .5em;
+    margin-top: .4em;
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin-top: 1.5em;
-}
-
-.list {
-    overflow-y: scroll;
-    padding: 0;
-    max-height: 30rem;
-    width: 95%;
-    background: red;
-    margin-bottom: 1rem;
-    margin-top: .5em;
-}
-
-.note-wrapper {
-    list-style: none;
-    padding: .5em;
-    margin-top: .3em;
-    background: yellow;
-}
-
-.title-date-ellipsis {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    background: green;
-    position: relative;
-}
-
-.title {
-    margin-right: auto;
-    font-size: 1.2rem;
-    width: 50%;
-    background: purple;
-    padding-left: .2em;
-    padding-right: .2em;
-    padding-top: .3em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    line-height: 1.2;
-    max-height: 2*1.2;
-}
-
-.date {
-    font-size: .7rem;
-}
-
-.elipsis {
-    margin-left: 2em;
-}
-
-.description {
-    margin-top: .5em;
-    margin-bottom: .3em;
-    background: pink;
-    padding-top: .4em;
-    padding-left: .3em;
-    padding-right: .3em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    line-height: 1.2;
-    max-height: 2*1.2;
-
 }
 
 .filter-img {
@@ -114,13 +48,146 @@ body {
 }
 
 .filter {
-    gap: 1rem;
     display: none;
     transition: all 1s;
+    width: 100%;
+    padding: .5em;
+    background: #1d2122;
+}
+
+.filter p {
+    text-transform: capitalize;
+    margin-bottom: .3em;
+    font-size: .8rem;
+    color: #b8b8b8;
 }
 
 .main.show .filter {
     display: flex;
+    justify-content: space-between;
+}
+
+.filter .title-filter-section {
+    width: 50%;
+    margin-right: auto;
+} 
+
+.filter .title-filter-section input {
+    width: 100%;
+    border: 1px solid #b8b8b8;
+    border-radius: .1rem;
+    outline: none;
+    padding: .3em;
+    margin-top: .3em;
+}
+
+.filter .title-filter-section input:active, 
+.filter .title-filter-section input:focus {
+    outline: 2px solid#b8b8b8;
+}
+
+.filter .month-filter-section {
+    width: 45%;
+}
+
+.filter .month-filter-section .calender {
+    height: 1.5rem;
+    margin-top: .3em;
+    outline: none;
+    border-radius: .1rem;
+}
+
+.filter .month-filter-section .calender:active, 
+.filter .month-filter-section .calender:focus {
+    outline: 2px solid#b8b8b8;
+}
+
+.list {
+    overflow-y: scroll;
+    padding-left: .3em;
+    max-height: 25rem;
+    width: 95%;
+    margin-bottom: 1rem;
+    margin-top: .5em;
+    background: #353a3c;
+}
+
+.list::-webkit-scrollbar {
+    width: 5px;
+    height: 2.5px;
+}
+
+.list::-webkit-scrollbar-thumb {
+    background: #353a3c;
+}
+
+.list::-webkit-scrollbar-thumb:hover {
+    background: #202628;
+}
+
+.list::-webkit-scrollbar-track {
+    background: #f7f5f5;
+}
+
+.note-wrapper {
+    list-style: none;
+    padding: .5em;
+    margin-top: .3em;
+    background: #202628;
+}
+
+.title-date-ellipsis {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #b8b8b8;
+    color: #b8b8b8;
+}
+
+.title {
+    margin-right: auto;
+    font-size: .9rem;
+    width: 60%;
+    padding-left: .2em;
+    padding-right: .2em;
+    padding-top: .1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.1;
+    max-height: 2*1.1;
+}
+
+.date {
+    font-size: .6rem;
+    width: 30%;
+    margin-left: .5em;
+}
+
+.elipsis {
+    margin-left: 1.2em;
+    width: 10%;
+}
+
+.description {
+    margin-top: .5em;
+    margin-bottom: .3em;
+    padding-top: .4em;
+    padding-left: .3em;
+    padding-right: .3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.2;
+    max-height: 2*1.2;
+    font-size: .9rem;
+    background: #272c2d;
+    color: #ffffff;
+
 }
 
 .del-edit {
