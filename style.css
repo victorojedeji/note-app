@@ -13,6 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background: #1c1c1c;
 }
 
 .main {
@@ -245,3 +246,7 @@ body {
         display: none;
     }
 } */
+
+#form {
+    position: absolute;
+}
