@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;1,300&display=swap');
+ 
+* {
+  font-family: 'Montserrat', sans-serif;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    padding-left: .5em;
+    margin-top: .4em;
+}
+
+.main {
+    width: 90%;
+    background: blue;
+    max-width: 40rem;
+    min-width: 20rem;
+    position: relative;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 1.5em;
+}
+
+.list {
+    overflow-y: scroll;
+    padding: 0;
+    max-height: 30rem;
+    width: 95%;
+    background: red;
+    margin-bottom: 1rem;
+    margin-top: .5em;
+}
+
+.note-wrapper {
+    list-style: none;
+    padding: .5em;
+    margin-top: .3em;
+    background: yellow;
+}
+
+.title-date-ellipsis {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    background: green;
+    position: relative;
+}
+
+.title {
+    margin-right: auto;
+    font-size: 1.2rem;
+    width: 50%;
+    background: purple;
+    padding-left: .2em;
+    padding-right: .2em;
+    padding-top: .3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.2;
+    max-height: 2*1.2;
+}
+
+.date {
+    font-size: .7rem;
+}
+
+.elipsis {
+    margin-left: 2em;
+}
+
+.description {
+    margin-top: .5em;
+    margin-bottom: .3em;
+    background: pink;
+    padding-top: .4em;
+    padding-left: .3em;
+    padding-right: .3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.2;
+    max-height: 2*1.2;
+
+}
+
+.filter-img {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    width: 7%;
+}
+
+.filter {
+    gap: 1rem;
+    display: none;
+    transition: all 1s;
+}
+
+.main.show .filter {
+    display: flex;
+}
+
+.del-edit {
+    position: absolute;
+    background: white;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    transform: scale(0);
+    transform-origin: right;
+}
+
+.main.appear .del-edit {
+    transform: scale(1);
+}
+
+.toggle {
+    display: flex;
+    padding: .3em;
+    align-items: center;
+    text-transform: capitalize;
+    gap: .2em;
+}
+
+.edit-img,
+.del-img {
+    width: 1rem;
+}
+
+.toggle:hover {
+    background: #ccc;
+    border-bottom: 1px solid black;
+}
