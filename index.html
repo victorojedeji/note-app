@@ -3,202 +3,204 @@
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="style.css" type="text/css" >
         <title>Notes</title>
     </head>
     <body>
-        <main class="main">
-            <div class="popup-wrapper">
-            <form action="" id="form">
-                <div class="popup-head">
-                <h4 class="popup-header">Add New Note</h4>
-                <img class="close-btn" src="svg/close.svg" alt="close" />
+        <div class="main-wrapper">
+            <main class="main">
+                <div class="popup-wrapper">
+                    <form action="" id="form">
+                        <div class="popup-head">
+                        <h4 class="popup-header">Add New Note</h4>
+                        <img class="close-btn" src="svg/close.svg" alt="close" />
+                        </div>
+                        <label for="input-post">title</label>
+                        <input type="text" name="input-post" id="input-post">
+        
+                        <label for="text-area">description</label>
+                        <textarea name="text-area" id="text-area" cols="30" rows="10"></textarea>
+        
+                        <button class="add-btn">add note</button>
+                    </form>
                 </div>
-                <label for="input-post">title</label>
-                <input type="text" name="input-post" id="input-post">
-
-                <label for="text-area">description</label>
-                <textarea name="text-area" id="text-area" cols="30" rows="10"></textarea>
-
-                <button class="add-btn">add note</button>
-            </form>
-            </div>
-            <h1 class="header">Notes App</h1>
-            <img src="svg/filter.svg" alt="filter" class="filter-img" />
-
-            <section class="wrapper">
-                <div class="filter">
-                    <div class="title-filter-section">
-                        <p>By title</p>
-                        <input type="text" name="search" id="search" value="" />
+                <h1 class="header">Notes App</h1>
+                <img src="svg/filter.svg" alt="filter" class="filter-img" />
+    
+                <section class="wrapper">
+                    <div class="filter">
+                        <div class="title-filter-section">
+                            <p>By title</p>
+                            <input type="text" name="search" id="search" value="" />
+                        </div>
+                        
+                        <div class="month-filter-section">
+                            <p>By month</p>
+                            <select name="calender" id="calender" class="calender">
+                                <option value="january">january</option>
+                                <option value="february">february</option>
+                                <option value="march">march</option>
+                                <option value="april">april</option>
+                                <option value="may">may</option>
+                                <option value="june">june</option>
+                                <option value="july">july</option>
+                                <option value="august">august</option>
+                                <option value="september">september</option>
+                                <option value="october">october</option>
+                                <option value="november">november</option>
+                                <option value="december">december</option>
+                            </select>
+                        </div>
                     </div>
-                    
-                    <div class="month-filter-section">
-                        <p>By month</p>
-                        <select name="calender" id="calender" class="calender">
-                            <option value="january">january</option>
-                            <option value="february">february</option>
-                            <option value="march">march</option>
-                            <option value="april">april</option>
-                            <option value="may">may</option>
-                            <option value="june">june</option>
-                            <option value="july">july</option>
-                            <option value="august">august</option>
-                            <option value="september">september</option>
-                            <option value="october">october</option>
-                            <option value="november">november</option>
-                            <option value="december">december</option>
-                        </select>
-                    </div>
-                </div>
-
-                <ul class="list">
-                   <li class="note-wrapper">
-                        <div class="title-date-ellipsis">
-                            <p class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit!</p>
-                            <p class="date">September, 8 2022</p>
-                            <img class="elipsis" src="svg/elipsis.svg"></img>
-                            <div class="del-edit">
-                              <div class="del toggle">
-                                  <img class="del-img" src="svg/delete.svg" alt="delete" />
-                                  <p>delete</p>
-                              </div>
-                              <div class="edit toggle">
-                                  <img class="edit-img" src="svg/edit.svg" alt="edit" />
-                                  <p>edit</p>
-                              </div>
+    
+                    <ul class="list">
+                       <li class="note-wrapper">
+                            <div class="title-date-ellipsis">
+                                <p class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit!</p>
+                                <p class="date">September, 8 2022</p>
+                                <img class="elipsis" src="svg/elipsis.svg"></img>
+                                <div class="del-edit">
+                                  <div class="del toggle">
+                                      <img class="del-img" src="svg/delete.svg" alt="delete" />
+                                      <p>delete</p>
+                                  </div>
+                                  <div class="edit toggle">
+                                      <img class="edit-img" src="svg/edit.svg" alt="edit" />
+                                      <p>edit</p>
+                                  </div>
+                                </div>
                             </div>
-                        </div>
-                        <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque commodi accusamus, officiis doloribus dolor reiciendis?</p>         
-                   </li> 
-                   
-                   <li class="note-wrapper">
-                        <div class="title-date-ellipsis">
-                            <p class="title">This is the title, dinner by 8</p>
-                            <p class="date">September, 8 2022</p>
-                            <img class="elipsis" src="svg/elipsis.svg"></img>
-                            <div class="del-edit">
-                                <div class="del toggle">
-                                    <img class="del-img" src="svg/delete.svg" alt="delete" />
-                                    <p>delete</p>
-                                </div>
-                                <div class="edit toggle">
-                                    <img class="edit-img" src="svg/edit.svg" alt="edit" />
-                                    <p>edit</p>
-                                </div>
-                              </div>
-                        </div>
-                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, magnam.</p>
-                        
-                   </li> 
-                   
-                   <li class="note-wrapper">
-                        <div class="title-date-ellipsis">
-                            <p class="title">This is the title, i want to buy this and that</p>
-                            <p class="date">September, 8 2022</p>
-                            <img class="elipsis" src="svg/elipsis.svg"></img>
-                            <div class="del-edit">
-                                <div class="del toggle">
-                                    <img class="del-img" src="svg/delete.svg" alt="delete" />
-                                    <p>delete</p>
-                                </div>
-                                <div class="edit toggle">
-                                    <img class="edit-img" src="svg/edit.svg" alt="edit" />
-                                    <p>edit</p>
-                                </div>
-                              </div>
-                        </div>
-                        <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, ea optio consequuntur quo tenetur voluptates qui accusantium dicta ducimus asperiores veniam earum eos voluptate eius at commodi id ab? Repellat?</p>
-                        
-                   </li> 
-                   
-                   <li class="note-wrapper">
-                        <div class="title-date-ellipsis">
-                            <p class="title">This is the title, download asake's new album</p>
-                            <p class="date">September, 8 2022</p>
-                            <img class="elipsis" src="svg/elipsis.svg"></img>
-                            <div class="del-edit">
-                                <div class="del toggle">
-                                    <img class="del-img" src="svg/delete.svg" alt="delete" />
-                                    <p>delete</p>
-                                </div>
-                                <div class="edit toggle">
-                                    <img class="edit-img" src="svg/edit.svg" alt="edit" />
-                                    <p>edit</p>
-                                </div>
-                              </div>
-                        </div>
-                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ex! Ad asperiores modi aliquid non!</p>
-                        
-                   </li> 
-                   
-                   <li class="note-wrapper">
-                        <div class="title-date-ellipsis">
-                            <p class="title">This is the title</p>
-                            <p class="date">September, 8 2022</p>
-                            <img class="elipsis" src="svg/elipsis.svg"></img>
-                            <div class="del-edit">
-                                <div class="del toggle">
-                                    <img class="del-img" src="svg/delete.svg" alt="delete" />
-                                    <p>delete</p>
-                                </div>
-                                <div class="edit toggle">
-                                    <img class="edit-img" src="svg/edit.svg" alt="edit" />
-                                    <p>edit</p>
-                                </div>
-                              </div>
-                        </div>
-                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit iure optio modi facilis, eum quod quaerat qui? Provident inventore explicabo dolores dolorum deleniti a voluptatum veritatis hic sapiente dicta? Rerum ut consectetur temporibus placeat ducimus quas officiis repudiandae. Tempora, eveniet?</p>
-                        
-                   </li> 
-                   
-                   
-                   <li class="note-wrapper">
-                        <div class="title-date-ellipsis">
-                            <p class="title">This is the title</p>
-                            <p class="date">September, 8 2022</p>
-                            <img class="elipsis" src="svg/elipsis.svg"></img>
-                            <div class="del-edit">
-                                <div class="del toggle">
-                                    <img class="del-img" src="svg/delete.svg" alt="delete" />
-                                    <p>delete</p>
-                                </div>
-                                <div class="edit toggle">
-                                    <img class="edit-img" src="svg/edit.svg" alt="edit" />
-                                    <p>edit</p>
-                                </div>
-                              </div>
-                        </div>
-                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum molestias ut sequi? Optio placeat voluptatibus ipsum ipsam illo impedit, vel dicta, in commodi maxime dolore fugit. Suscipit, minus explicabo veritatis omnis maxime iure asperiores accusamus!</p>
-                        
-                   </li> 
-                   
-                   
-                   <li class="note-wrapper">
-                        <div class="title-date-ellipsis">
-                            <p class="title">This is the title</p>
-                            <p class="date">September, 8 2022</p>
-                            <img class="elipsis" src="svg/elipsis.svg"></img>
-                            <div class="del-edit">
-                                <div class="del toggle">
-                                    <img class="del-img" src="svg/delete.svg" alt="delete" />
-                                    <p>delete</p>
-                                </div>
-                                <div class="edit toggle">
-                                    <img class="edit-img" src="svg/edit.svg" alt="edit" />
-                                    <p>edit</p>
-                                </div>
-                              </div>
-                        </div>
-                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum magnam nemo facilis ipsam eum, ipsum dolorum possimus natus sit saepe!</p>
-                        
-                   </li> 
-                </ul>
-                <div class="add-section">
-                    <img class="add" src="svg/add.svg" alt="add" />
-                </div>
-            </section>
-        </main>
+                            <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque commodi accusamus, officiis doloribus dolor reiciendis?</p>         
+                       </li> 
+                       
+                       <li class="note-wrapper">
+                            <div class="title-date-ellipsis">
+                                <p class="title">This is the title, dinner by 8</p>
+                                <p class="date">September, 8 2022</p>
+                                <img class="elipsis" src="svg/elipsis.svg"></img>
+                                <div class="del-edit">
+                                    <div class="del toggle">
+                                        <img class="del-img" src="svg/delete.svg" alt="delete" />
+                                        <p>delete</p>
+                                    </div>
+                                    <div class="edit toggle">
+                                        <img class="edit-img" src="svg/edit.svg" alt="edit" />
+                                        <p>edit</p>
+                                    </div>
+                                  </div>
+                            </div>
+                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, magnam.</p>
+                            
+                       </li> 
+                       
+                       <li class="note-wrapper">
+                            <div class="title-date-ellipsis">
+                                <p class="title">This is the title, i want to buy this and that</p>
+                                <p class="date">September, 8 2022</p>
+                                <img class="elipsis" src="svg/elipsis.svg"></img>
+                                <div class="del-edit">
+                                    <div class="del toggle">
+                                        <img class="del-img" src="svg/delete.svg" alt="delete" />
+                                        <p>delete</p>
+                                    </div>
+                                    <div class="edit toggle">
+                                        <img class="edit-img" src="svg/edit.svg" alt="edit" />
+                                        <p>edit</p>
+                                    </div>
+                                  </div>
+                            </div>
+                            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, ea optio consequuntur quo tenetur voluptates qui accusantium dicta ducimus asperiores veniam earum eos voluptate eius at commodi id ab? Repellat?</p>
+                            
+                       </li> 
+                       
+                       <li class="note-wrapper">
+                            <div class="title-date-ellipsis">
+                                <p class="title">This is the title, download asake's new album</p>
+                                <p class="date">September, 8 2022</p>
+                                <img class="elipsis" src="svg/elipsis.svg"></img>
+                                <div class="del-edit">
+                                    <div class="del toggle">
+                                        <img class="del-img" src="svg/delete.svg" alt="delete" />
+                                        <p>delete</p>
+                                    </div>
+                                    <div class="edit toggle">
+                                        <img class="edit-img" src="svg/edit.svg" alt="edit" />
+                                        <p>edit</p>
+                                    </div>
+                                  </div>
+                            </div>
+                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ex! Ad asperiores modi aliquid non!</p>
+                            
+                       </li> 
+                       
+                       <li class="note-wrapper">
+                            <div class="title-date-ellipsis">
+                                <p class="title">This is the title</p>
+                                <p class="date">September, 8 2022</p>
+                                <img class="elipsis" src="svg/elipsis.svg"></img>
+                                <div class="del-edit">
+                                    <div class="del toggle">
+                                        <img class="del-img" src="svg/delete.svg" alt="delete" />
+                                        <p>delete</p>
+                                    </div>
+                                    <div class="edit toggle">
+                                        <img class="edit-img" src="svg/edit.svg" alt="edit" />
+                                        <p>edit</p>
+                                    </div>
+                                  </div>
+                            </div>
+                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit iure optio modi facilis, eum quod quaerat qui? Provident inventore explicabo dolores dolorum deleniti a voluptatum veritatis hic sapiente dicta? Rerum ut consectetur temporibus placeat ducimus quas officiis repudiandae. Tempora, eveniet?</p>
+                            
+                       </li> 
+                       
+                       
+                       <li class="note-wrapper">
+                            <div class="title-date-ellipsis">
+                                <p class="title">This is the title</p>
+                                <p class="date">September, 8 2022</p>
+                                <img class="elipsis" src="svg/elipsis.svg"></img>
+                                <div class="del-edit">
+                                    <div class="del toggle">
+                                        <img class="del-img" src="svg/delete.svg" alt="delete" />
+                                        <p>delete</p>
+                                    </div>
+                                    <div class="edit toggle">
+                                        <img class="edit-img" src="svg/edit.svg" alt="edit" />
+                                        <p>edit</p>
+                                    </div>
+                                  </div>
+                            </div>
+                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum molestias ut sequi? Optio placeat voluptatibus ipsum ipsam illo impedit, vel dicta, in commodi maxime dolore fugit. Suscipit, minus explicabo veritatis omnis maxime iure asperiores accusamus!</p>
+                            
+                       </li> 
+                       
+                       
+                       <li class="note-wrapper">
+                            <div class="title-date-ellipsis">
+                                <p class="title">This is the title</p>
+                                <p class="date">September, 8 2022</p>
+                                <img class="elipsis" src="svg/elipsis.svg"></img>
+                                <div class="del-edit">
+                                    <div class="del toggle">
+                                        <img class="del-img" src="svg/delete.svg" alt="delete" />
+                                        <p>delete</p>
+                                    </div>
+                                    <div class="edit toggle">
+                                        <img class="edit-img" src="svg/edit.svg" alt="edit" />
+                                        <p>edit</p>
+                                    </div>
+                                  </div>
+                            </div>
+                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum magnam nemo facilis ipsam eum, ipsum dolorum possimus natus sit saepe!</p>
+                            
+                       </li> 
+                    </ul>
+                    <div class="add-section">
+                        <img class="add" src="svg/add.svg" alt="add" />
+                    </div>
+                </section>
+            </main>
+        </div>
         <script type="text/javascript" src="index.js">
             
         </script>
