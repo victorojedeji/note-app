@@ -8,15 +8,21 @@
     </head>
     <body>
         <main class="main">
+            <div class="popup-wrapper">
             <form action="" id="form">
+                <div class="popup-head">
+                <h4 class="popup-header">Add New Note</h4>
+                <img class="close-btn" src="svg/close.svg" alt="close" />
+                </div>
                 <label for="input-post">title</label>
                 <input type="text" name="input-post" id="input-post">
 
                 <label for="text-area">description</label>
                 <textarea name="text-area" id="text-area" cols="30" rows="10"></textarea>
 
-                <button type="submit">add note</button>
+                <button class="add-btn">add note</button>
             </form>
+            </div>
             <h1 class="header">Notes App</h1>
             <img src="svg/filter.svg" alt="filter" class="filter-img" />
 
@@ -188,6 +194,9 @@
                         
                    </li> 
                 </ul>
+                <div class="add-section">
+                    <img class="add" src="svg/add.svg" alt="add" />
+                </div>
             </section>
         </main>
         <script type="text/javascript" src="index.js">

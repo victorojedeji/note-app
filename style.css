@@ -106,9 +106,9 @@ body {
 .list {
     overflow-y: scroll;
     padding-left: .3em;
-    max-height: 25rem;
+    max-height: 28rem;
     width: 95%;
-    margin-bottom: 1rem;
+    margin-bottom: .3em;
     margin-top: .5em;
     background: #353a3c;
 }
@@ -202,7 +202,15 @@ body {
     transform-origin: right;
 }
 
-.main.appear .del-edit {
+/*.main.appear .del-edit {
+    transform: scale(1);
+}*/
+
+/*.del-edit.appear {
+    transform: scale(1);
+}*/
+
+.elipsis.appear .del-edit {
     transform: scale(1);
 }
 
@@ -247,6 +255,111 @@ body {
     }
 } */
 
-#form {
+.popup-wrapper {
+    z-index: 2;
     position: absolute;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+
+
+.main.popup .popup-wrapper {
+    transform: scale(1);
+}
+
+#form{
+    z-index: 3;
+    border: 1px solid #b8b8b8;
+    background: 0, 0, 0, .5;
+    backdrop-filter: blur(20px);
+    padding: .5em;
+}
+
+#form label {
+    display: block;
+    color: #b8b8b8;
+    text-transform: capitalize;
+    padding-bottom: .3em;
+}
+
+.add-btn {
+    display: block;
+}
+
+.popup-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .3em;
+}
+
+.popup-header {
+    color: #b8b8b8;
+}
+
+.popup-head .close-btn { 
+    filter: invert(70%);
+}
+
+.close-btn {
+    width: 1.4rem;
+}
+
+#input-post {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: .5em;
+    outline: none;
+}
+
+#text-area {
+    width: 100%;
+    height: 150px;
+    resize: none;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+#input-post:focus, #text-area:focus {
+    outline: 3px solid #b8b8b8;
+}
+
+.add-btn {
+    width: 100%;
+    padding: .5em;
+    text-transform: capitalize;
+}
+
+.add-btn:hover {
+    background: #b8b8b8;
+}
+
+.add-btn:active {
+    color: #ffffff;
+}
+
+.add-section {
+    width: 100%;
+    margin-bottom: 1.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.add {
+    width: 2rem;
+    filter: invert(70%);
+}
+
+.add:hover {
+    filter: invert(100%);
+}
+
+.add:active {
+    filter: invert(70%);
 }
