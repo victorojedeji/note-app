@@ -263,9 +263,9 @@ img {
     transform: scale(0);
 }
 
-/* .main.popup .popup-wrapper {
+.main.popup .popup-wrapper {
     transform: scale(1);
-} */
+}
 
 #form{
     z-index: 3;
