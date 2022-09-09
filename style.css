@@ -8,59 +8,35 @@
 }
 
 body {
-    font-size: 1rem; 
-    background: #1c1c1c;
     margin: 0 auto;
 }
 
 .main-wrapper {
-    background-color: green;
-    height: 100vh;
-    width: 100%;
+    font-size: 1rem;
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
     align-items: center;
+    height: 100vh;
+
 }
 
 .main {
-    background: blue;
-    width: 100%;
-    max-width: 400px;
-    min-width: 400px;
-    position: relative;
+    background: #202628;
+    width: 90%;
+    min-width: 250px;
+    max-width: 500px;
     margin: 0 auto;
-    /* background: #202628; */
-    border-radius: .5em;
+    position: relative;
 }
 
-@media only screen and (max-device-width: 780px) {
-    .main-wrapper {
-        background-color: yellow;
-        height: 100vh;
-        width: 100%;
-        max-width: 1000px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-    }
-
-    .main {
-        background: blue;
-        width: 100%;
-        max-width: 400px;
-        min-width: 300px;
-        position: relative;
-        margin: 0 auto;
-        /* background: #202628; */
-        border-radius: .5em;
-        transform: scale(1.9);
-    }
+img {
+    width: 3rem;
 }
 
 .header {
     padding-left: .5em;
-    margin-top: .4em;
+    margin-top: .8em;
     color: #ffffff;
     font-size: 1.4rem;
 }
@@ -81,6 +57,7 @@ body {
     filter: invert(100%);
 }
 
+
 .filter {
     display: none;
     transition: all 1s;
@@ -89,21 +66,20 @@ body {
     background: #1d2122;
 }
 
+.main.show .filter {
+    display: flex;
+    justify-content: space-around;
+}
+
 .filter p {
     text-transform: capitalize;
     margin-bottom: .3em;
-    font-size: .8rem;
+    font-size: 1rem;
     color: #b8b8b8;
-}
-
-.main.show .filter {
-    display: flex;
-    justify-content: space-between;
 }
 
 .filter .title-filter-section {
     width: 50%;
-    margin-right: auto;
 } 
 
 .filter .title-filter-section input {
@@ -128,7 +104,7 @@ body {
     height: 1.5rem;
     margin-top: .3em;
     outline: none;
-    border-radius: .1rem;
+    border-radius: .1em;
 }
 
 .filter .month-filter-section .calender:active, 
@@ -139,7 +115,7 @@ body {
 .list {
     overflow-y: scroll;
     padding-left: .3em;
-    max-height: 28rem;
+    max-height: 67vh;
     width: 95%;
     margin-bottom: .3em;
     margin-top: .5em;
@@ -195,7 +171,7 @@ body {
 }
 
 .date {
-    font-size: .6rem;
+    font-size: 1rem;
     width: 30%;
     margin-left: .5em;
 }
@@ -207,6 +183,7 @@ body {
 }
 
 .description {
+    font-size: 1.2rem;
     margin-top: .5em;
     margin-bottom: .3em;
     padding-top: .4em;
@@ -235,17 +212,9 @@ body {
     transform-origin: right;
 }
 
-/*.main.appear .del-edit {
+/* .elipsis.appear .del-edit {
     transform: scale(1);
-}*/
-
-/*.del-edit.appear {
-    transform: scale(1);
-}*/
-
-.elipsis.appear .del-edit {
-    transform: scale(1);
-}
+} */
 
 .toggle {
     display: flex;
@@ -253,7 +222,7 @@ body {
     align-items: center;
     text-transform: capitalize;
     gap: .2em;
-    font-size: .9rem;
+    font-size: 1.2rem;
     transition: all .2s ease-out;
 }
 
@@ -281,13 +250,6 @@ body {
     filter: invert(100%);
 }
 
-/* @media (min-width:300px) {
-
-    body {
-        display: none;
-    }
-} */
-
 .popup-wrapper {
     z-index: 2;
     position: absolute;
@@ -301,17 +263,18 @@ body {
     transform: scale(0);
 }
 
-
-.main.popup .popup-wrapper {
+/* .main.popup .popup-wrapper {
     transform: scale(1);
-}
+} */
 
 #form{
     z-index: 3;
     border: 1px solid #b8b8b8;
-    background: 0, 0, 0, .5;
+    background: rgba(0, 0, 0, .5);
     backdrop-filter: blur(20px);
     padding: .5em;
+    font-size: 1.5rem;
+    width: 70%;
 }
 
 #form label {
@@ -329,7 +292,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .3em;
+    /* padding: em; */
+    margin-bottom: 1em;
 }
 
 .popup-header {
@@ -341,14 +305,15 @@ body {
 }
 
 .close-btn {
-    width: 1.4rem;
+    width: 1.6rem;
 }
 
 #input-post {
     width: 100%;
     margin-bottom: 1rem;
-    padding: .5em;
+    padding: .4em;
     outline: none;
+    font-size: 1.2rem;
 }
 
 #text-area {
@@ -357,6 +322,8 @@ body {
     resize: none;
     margin-bottom: 1rem;
     outline: none;
+    font-size: 1.2rem;
+    padding: .4em;
 }
 
 #input-post:focus, #text-area:focus {
@@ -367,6 +334,7 @@ body {
     width: 100%;
     padding: .5em;
     text-transform: capitalize;
+    font-size: 1.4rem;
 }
 
 .add-btn:hover {
@@ -395,4 +363,72 @@ body {
 
 .add:active {
     filter: invert(70%);
+}
+
+@media only screen and (max-device-width: 780px)  {
+    .main-wrapper {
+        font-size: 2rem;
+        background-color: yellow;
+    }
+
+    .filter-img {
+        width: 10%;
+    }
+
+    .header {
+        font-size: 2.5rem;
+    }
+
+    .filter p {
+        font-size: 1.3rem;
+    }
+
+    .filter .title-filter-section input {
+        font-size: 1.7rem;
+    }
+
+    .filter .month-filter-section .calender {
+    height: 3.1rem;
+    font-size: 1.3rem;
+    }
+
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .date {
+        font-size: 1.2rem;
+    }
+
+    .elipsis {
+        width: 15%;
+    }
+
+    .description {
+        font-size: 1.5rem;
+    }
+
+    .toggle {
+        font-size: 1.6rem;
+    }
+    
+    .toggle img {
+        width: 2rem;
+    }
+
+    #form {
+        font-size: 1.7rem;
+    }
+
+    .close-btn {
+        width: 2rem;
+    }
+
+    #form input, #text-area {
+        font-size: 1.4rem;
+    }
+
+    .add {
+        width: 3rem;
+    }
 }
