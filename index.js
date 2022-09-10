@@ -139,7 +139,7 @@ function edit() {
     let wrapper = event.target.parentNode,
     parentWrap = wrapper.parentNode,
     parentSupWrap = parentWrap.parentNode;
-    parentSupWrap.classList.remove("appear")
+    parentSupWrap.classList.remove("appear");
 }
 
 
