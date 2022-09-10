@@ -95,13 +95,11 @@ function addNoteFunc(e) {
         let date = dateObj.getDate();
         let month = months[dateObj.getMonth()];
         let year = dateObj.getFullYear();
-        let notes = [];
         let noteObj = {
             title: titleNote,
             description: descNote,
             date: `${month} ${date}, ${year}`
         }
-        
         notes.push(noteObj);
         localStorage.setItem("notes", JSON.stringify(notes));
     }
