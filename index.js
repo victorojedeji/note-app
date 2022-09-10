@@ -31,7 +31,6 @@ descriptionBox.forEach(item => {
   
 const notes = JSON.parse(localStorage.getItem("notes") || "[]");     
 
-
 let increment = 0;
 function show() {
     increment = increment + 1;
