@@ -454,4 +454,25 @@ img {
         width: 3rem;
     }
 }
+
+
+`<li class="note-wrapper">
+                            <div class="title-date-ellipsis">
+                                <p class="title">${note.title}</p>
+                                <p class="date">${note.date}</p>
+                                <img class="elipsis" src="svg/elipsis.svg"></img>
+                                <div class="del-edit">
+                                    <div class="del toggle">
+                                        <img class="del-img" src="svg/delete.svg" alt="delete" />
+                                        <p>delete</p>
+                                    </div>
+                                    <div class="edit toggle">
+                                        <img class="edit-img" src="svg/edit.svg" alt="edit" />
+                                        <p>edit</p>
+                                    </div>
+                                  </div>
+                            </div>
+                            <p class="description">${note.description}</p> 
+                       </li>`
+
 */
