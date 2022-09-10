@@ -135,9 +135,9 @@ function edit() {
         }
     })
 
-    
-    let parent = event.target.parentNode,
-    parentWrap = parent.parentNode,
+
+    let wrapper = event.target.parentNode,
+    parentWrap = wrapper.parentNode,
     parentSupWrap = parentWrap.parentNode;
     parentSupWrap.classList.remove("appear")
 }
