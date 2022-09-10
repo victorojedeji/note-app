@@ -17,13 +17,13 @@ list = document.querySelector(".list");
  addNote.addEventListener("click", addNoteFunc)
  
  
- editBtn.forEach( item => {
-     item.addEventListener("click", edit)
-});
+ //editBtn.forEach( item => {
+ //    item.addEventListener("click", edit)
+//});
 
- elipsisBtn.forEach(item => {
-    item.addEventListener("click", appear);
- }); 
+ //elipsisBtn.forEach(item => {
+ //   item.addEventListener("click", appear);
+ //}); 
     
 descriptionBox.forEach(item => {
     item.addEventListener("click", expand)
@@ -56,6 +56,7 @@ function popUpClose() {
 }
 
 function appear() {
+    console.log("clicked")
    let parent = event.target.parentNode;
    increment = increment + 1;
    if(increment === 3) {
@@ -93,7 +94,7 @@ function displayNote() {
                             <div class="title-date-ellipsis">
                                 <p class="title">${note.title}</p>
                                 <p class="date">${note.date}</p>
-                                <img class="elipsis" src="svg/elipsis.svg"></img>
+                                <img class="elipsis" src="svg/elipsis.svg" onclick="appear()"></img>
                                 <div class="del-edit">
                                     <div class="del toggle">
                                         <img class="del-img" src="svg/delete.svg" alt="delete" />
@@ -107,7 +108,8 @@ function displayNote() {
                             </div>
                             <p class="description">${note.description}</p> 
                        </li>`
-        list.innerHTML += liTag;
+       list.innerHTML += liTag;
+       //list.insertAdjascentHTML("afterbegin", liTag);
     })
 }
 displayNote();
