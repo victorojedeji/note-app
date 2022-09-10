@@ -27,19 +27,14 @@ list = document.querySelector(".list");
  //   item.addEventListener("click", appear);
  //}); 
     
-descriptionBox.forEach(item => {
-    item.addEventListener("click", expand)
-})   
+// descriptionBox.forEach(item => {
+//     item.addEventListener("click", expand)
+// })   
+
   
 const notes = JSON.parse(localStorage.getItem("notes") || "[]");     
 
 
-function edit() {
-    main.classList.add("popup");
-    document.querySelector(".input-title").textContent = "Edit Title";
-    document.querySelector(".note-title").textContent = "Edit Note";
-    addNote.textContent = "Update Note";
-}
 
 
 let increment = 0;
@@ -102,7 +97,7 @@ function displayNote() {
     notes.forEach((note) => {
         let liTag =    `<li class="note-wrapper">
                             <div class="title-date-ellipsis">
-                                <p class="title">${note.title}</p>
+                                <p class="title" title="${note.title}">${note.title}</p>
                                 <p class="date">${note.date}</p>
                                 <img class="elipsis" src="svg/elipsis.svg" onclick="appear()"></img>
                                 <div class="del-edit">
@@ -116,13 +111,36 @@ function displayNote() {
                                     </div>
                                   </div>
                             </div>
-                            <p class="description">${note.description}</p> 
+                            <p class="description" onclick="expand()">${note.description}</p> 
                        </li>`
        list.innerHTML += liTag;
        //list.insertAdjascentHTML("afterbegin", liTag);
     })
 }
 displayNote();
+
+function edit() {
+    main.classList.add("popup");
+    document.querySelector(".input-title").textContent = "Edit Title";
+    document.querySelector(".note-title").textContent = "Edit Note";
+    document.querySelector(".popup-header").textContent = "Update Note";
+    addNote.textContent = "Update Note";
+
+    let title = document.querySelector(".title");
+    let titleTxt = title.getAttribute("title");
+    console.log(titleTxt)
+    notes.forEach(note => {
+        if(note.title === titleTxt) {
+            console.log(note)
+        }
+    })
+
+    
+    let parent = event.target.parentNode,
+    parentWrap = parent.parentNode,
+    parentSupWrap = parentWrap.parentNode;
+    parentSupWrap.classList.remove("appear")
+}
 
 
 function addNoteFunc(e) {
