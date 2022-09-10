@@ -126,14 +126,6 @@ function edit() {
     document.querySelector(".popup-header").textContent = "Update Note";
     addNote.textContent = "Update Note";
 
-    let title = document.querySelector(".title");
-    let titleTxt = title.getAttribute("title");
-    console.log(titleTxt)
-    notes.forEach(note => {
-        if(note.title === titleTxt) {
-            console.log(note)
-        }
-    })
 
 
     let wrapper = event.target.parentNode,
