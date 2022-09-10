@@ -129,6 +129,7 @@ displayNote();
 
 function edit(id, title, note) {
     main.classList.add("popup");
+    titleTag.focus();
     document.querySelector(".input-title").textContent = "Edit Title";
     document.querySelector(".note-title").textContent = "Edit Note";
     document.querySelector(".popup-header").textContent = "Update Note";
