@@ -126,7 +126,6 @@ function edit(id, title, note) {
     document.querySelector(".popup-header").textContent = "Update Note";
     addNote.textContent = "Update Note";
 
-    console.log(id, title, note)
 
     let wrapper = event.target.parentNode,
     parentWrap = wrapper.parentNode,
