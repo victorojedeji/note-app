@@ -31,7 +31,8 @@ list = document.querySelector(".list");
 //     item.addEventListener("click", expand)
 // })   
 
-  
+let isUpdated = false;
+let updateId; 
 const notes = JSON.parse(localStorage.getItem("notes") || "[]");     
 
 
@@ -53,7 +54,12 @@ function show() {
 };
 
 function popUp() {
+    titleTag.focus();
     main.classList.add("popup");
+    document.querySelector(".input-title").textContent = "Title";
+    document.querySelector(".note-title").textContent = "Note";
+    document.querySelector(".popup-header").textContent = "Add New Note";
+    addNote.textContent = "Add Note";
 };
 
 function popUpClose() {
@@ -105,7 +111,7 @@ function displayNote() {
                                         <img class="del-img" src="svg/delete.svg" alt="delete" />
                                         <p>delete</p>
                                     </div>
-                                    <div class="edit toggle" onclick="edit(${index}, ${note.title}, ${note.description})">
+                                    <div class="edit toggle" onclick="edit(${index}, '${note.title}', '${note.description}')">
                                         <img class="edit-img" src="svg/edit.svg" alt="edit" />
                                         <p>edit</p>
                                     </div>
@@ -125,6 +131,16 @@ function edit(id, title, note) {
     document.querySelector(".note-title").textContent = "Edit Note";
     document.querySelector(".popup-header").textContent = "Update Note";
     addNote.textContent = "Update Note";
+
+    console.log("pressing", id, title, note);
+    isUpdated = true;
+    updateId = id;
+    displayNote();
+    titleTag.value = title;
+    descTag.value = note;
+    // let newTitleVal = titleTag.value;
+    // let newDescVal = descTag.value;
+    // console.log(newTitleVal, newDescVal)
 
 
     let wrapper = event.target.parentNode,
@@ -158,7 +174,12 @@ function addNoteFunc(e) {
             date: `${month} ${date}, ${year}`
         }
         
-        notes.push(noteObj);
+        if(!isUpdated) {
+            notes.push(noteObj);
+        } else {
+            notes[updateId] = noteObj;
+        }
+        
         localStorage.setItem("notes", JSON.stringify(notes));
         displayNote();
         popUpClose();
