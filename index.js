@@ -56,16 +56,18 @@ function show() {
 function popUp() {
     titleTag.focus();
     main.classList.add("popup");
+    
+};
+
+function popUpClose() {
+    isUpdated = false;
+    titleTag.value = "";
+    descTag.value = "";
+    main.classList.remove("popup");
     document.querySelector(".input-title").textContent = "Title";
     document.querySelector(".note-title").textContent = "Note";
     document.querySelector(".popup-header").textContent = "Add New Note";
     addNote.textContent = "Add Note";
-};
-
-function popUpClose() {
-    titleTag.value = "";
-    descTag.value = "";
-    main.classList.remove("popup");
 }
 
 function appear() {
@@ -177,6 +179,7 @@ function addNoteFunc(e) {
         if(!isUpdated) {
             notes.push(noteObj);
         } else {
+            isUpdated = false;
             notes[updateId] = noteObj;
         }
         
