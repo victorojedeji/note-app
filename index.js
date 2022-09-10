@@ -97,7 +97,7 @@ function displayNote() {
     notes.forEach((note, index) => {
         let liTag =    `<li class="note-wrapper">
                             <div class="title-date-ellipsis">
-                                <p class="title" title="${note.title}">${note.title}</p>
+                                <p class="title">${note.title}</p>
                                 <p class="date">${note.date}</p>
                                 <img class="elipsis" src="svg/elipsis.svg" onclick="appear()"></img>
                                 <div class="del-edit">
@@ -105,7 +105,7 @@ function displayNote() {
                                         <img class="del-img" src="svg/delete.svg" alt="delete" />
                                         <p>delete</p>
                                     </div>
-                                    <div class="edit toggle" onclick="edit()">
+                                    <div class="edit toggle" onclick="edit(${index}, ${note.title}, ${note.description})">
                                         <img class="edit-img" src="svg/edit.svg" alt="edit" />
                                         <p>edit</p>
                                     </div>
@@ -119,14 +119,14 @@ function displayNote() {
 }
 displayNote();
 
-function edit() {
+function edit(id, title, note) {
     main.classList.add("popup");
     document.querySelector(".input-title").textContent = "Edit Title";
     document.querySelector(".note-title").textContent = "Edit Note";
     document.querySelector(".popup-header").textContent = "Update Note";
     addNote.textContent = "Update Note";
 
-
+    console.log(id, title, note)
 
     let wrapper = event.target.parentNode,
     parentWrap = wrapper.parentNode,
