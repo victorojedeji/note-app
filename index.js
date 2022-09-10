@@ -94,14 +94,14 @@ function expand() {
 function displayNote() {
     document.querySelectorAll(".note-wrapper").forEach(note => note.remove());
     
-    notes.forEach((note) => {
+    notes.forEach((note, index) => {
         let liTag =    `<li class="note-wrapper">
                             <div class="title-date-ellipsis">
                                 <p class="title" title="${note.title}">${note.title}</p>
                                 <p class="date">${note.date}</p>
                                 <img class="elipsis" src="svg/elipsis.svg" onclick="appear()"></img>
                                 <div class="del-edit">
-                                    <div class="del toggle" onclick="del()">
+                                    <div class="del toggle" onclick="del(${index})">
                                         <img class="del-img" src="svg/delete.svg" alt="delete" />
                                         <p>delete</p>
                                     </div>
@@ -132,8 +132,15 @@ function edit() {
     parentWrap = wrapper.parentNode,
     parentSupWrap = parentWrap.parentNode;
     parentSupWrap.classList.remove("appear");
+
 }
 
+
+function del(id) {
+    notes.splice(id, 1);
+    localStorage.setItem("notes", JSON.stringify(notes));
+    displayNote();
+}
 
 function addNoteFunc(e) {
     e.preventDefault();
