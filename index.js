@@ -8,8 +8,8 @@ editBtn = document.querySelectorAll(".edit toggle"),
 descriptionBox = document.querySelectorAll(".description"),
 addNote = document.querySelector(".add-btn"),
 titleTag = document.querySelector("#input-post"),
-descTag = document.querySelector("#text-area");
-
+descTag = document.querySelector("#text-area"),
+list = document.querySelector(".list");
 
  filterLogo.addEventListener("click", show); 
  add.addEventListener("click", popUp);
@@ -30,6 +30,7 @@ descriptionBox.forEach(item => {
 })   
   
 const notes = JSON.parse(localStorage.getItem("notes") || "[]");     
+
 
 let increment = 0;
 function show() {
@@ -83,6 +84,35 @@ function expand() {
     }
 };
 
+function displayNote() {
+    document.querySelectorAll(".note-wrapper").forEach(note => note.remove());
+    
+    notes.forEach((note) => {
+        console.log(note)
+        let liTag =    `<li class="note-wrapper">
+                            <div class="title-date-ellipsis">
+                                <p class="title">${note.title}</p>
+                                <p class="date">${note.date}</p>
+                                <img class="elipsis" src="svg/elipsis.svg"></img>
+                                <div class="del-edit">
+                                    <div class="del toggle">
+                                        <img class="del-img" src="svg/delete.svg" alt="delete" />
+                                        <p>delete</p>
+                                    </div>
+                                    <div class="edit toggle">
+                                        <img class="edit-img" src="svg/edit.svg" alt="edit" />
+                                        <p>edit</p>
+                                    </div>
+                                  </div>
+                            </div>
+                            <p class="description">${note.description}</p> 
+                       </li>`
+        list.innerHTML += liTag;
+    })
+}
+displayNote();
+
+
 function addNoteFunc(e) {
     e.preventDefault();
     let months = ["January", "February", " March", "April", " May", "June", " July", "August", " September", "October", "November", " December"];
@@ -99,8 +129,12 @@ function addNoteFunc(e) {
             description: descNote,
             date: `${month} ${date}, ${year}`
         }
+        
         notes.push(noteObj);
         localStorage.setItem("notes", JSON.stringify(notes));
+        displayNote();
+        popUpClose();
+        
     }
 }
 
