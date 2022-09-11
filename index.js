@@ -1,5 +1,5 @@
 let main = document.querySelector(".main"),
-filterLogo = document.querySelector(".filter-img"),
+//filterLogo = document.querySelector(".filter-img"),
 searchFilter =document.querySelector("#search"),
 elipsisBtn = document.querySelectorAll(".elipsis"),
 add = document.querySelector(".add"),
@@ -9,15 +9,17 @@ delBtn = document.querySelectorAll(".del toggle"),
 descriptionBox = document.querySelectorAll(".description"),
 addNote = document.querySelector(".add-btn"),
 titleTag = document.querySelector("#input-post"),
+title = document.querySelectorAll(".title"),
 descTag = document.querySelector("#text-area"),
-list = document.querySelector(".list");
+list = document.querySelector(".list"),
+noteWrapper = document.querySelectorAll(".note-wrapper");
 
 
- filterLogo.addEventListener("click", show); 
+ //filterLogo.addEventListener("click", show); 
  add.addEventListener("click", popUp);
  closeBtn.addEventListener("click", popUpClose);
  addNote.addEventListener("click", addNoteFunc)
- 
+//searchFilter.addEventListener("input", filterList)
  
  //editBtn.forEach( item => {
  //    item.addEventListener("click", edit)
@@ -36,22 +38,22 @@ let updateId;
 const notes = JSON.parse(localStorage.getItem("notes") || "[]");     
 
 
-
-
-let increment = 0;
-function show() {
-    increment = increment + 1;
-    if(increment === 3) {
-        increment = 1;
-    }
+//let increment = 0;
+//function show() {
+    //increment = increment + 1;
+    //if(increment === 3) {
+    //    increment = 1;
+    //}
     
-    if(increment === 1){
-        main.classList.add("show")
-    } else {
-        searchFilter.value = "";
-        main.classList.remove("show")
-    }
-};
+    //if(increment === 1){
+    //    main.classList.add("show")
+    // } else {
+    //    searchFilter.value = "";
+    //    main.classList.remove("show")
+    //}
+    
+//    main.classList.toggle("show");
+//};
 
 function popUp() {
     titleTag.focus();
@@ -72,31 +74,33 @@ function popUpClose() {
 
 function appear() {
    let parent = event.target.parentNode;
-   increment = increment + 1;
-   if(increment === 3) {
-        increment = 1;
-   }
+   //increment = increment + 1;
+   //if(increment === 3) {
+   //     increment = 1;
+   //}
    
-   if(increment === 1) {
-        parent.classList.add("appear")
-   } else {
-       parent.classList.remove("appear")
-   }
+   //if(increment === 1) {
+   //     parent.classList.add("appear")
+   //} else {
+   //   parent.classList.remove("appear")
+   //}
+   parent.classList.toggle("appear");
 }
 
 function expand() {
     let parentEl = event.target.parentNode;
     
-    increment = increment + 1;
-    if(increment=== 3) {
-        increment = 1;
-    }
+    //increment = increment + 1;
+    //if(increment=== 3) {
+    //    increment = 1;
+    //}
     
-    if(increment === 1) {
-        parentEl.classList.add("expand")
-    } else {
-        parentEl.classList.remove("expand")
-    }
+    //if(increment === 1) {
+    //    parentEl.classList.add("expand")
+    //} else {
+    //    parentEl.classList.remove("expand")
+    //}
+    parentEl.classList.toggle("expand");
 };
 
 function displayNote() {

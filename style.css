@@ -55,6 +55,7 @@ img {
     right: 1em;
     width: 5%;
     filter: invert(100%);
+    display: none;
 }
 
 
@@ -387,8 +388,11 @@ img {
 .add:active {
     filter: invert(70%);
 }
-/*
 
+.hide {
+    display: none;
+}
+/*
 @media only screen and (max-device-width: 780px)  {
     .main-wrapper {
         font-size: 2rem;
