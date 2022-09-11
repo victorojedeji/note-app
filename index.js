@@ -121,7 +121,7 @@ function displayNote() {
                                         <img class="edit-img" src="svg/edit.svg" alt="edit" />
                                         <p>edit</p>
                                     </div>
-                                  </div>
+                                </div>
                             </div>
                             <p class="description" onclick="expand()">${note.description}</p> 
                        </li>`

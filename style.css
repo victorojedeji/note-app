@@ -232,6 +232,7 @@ img {
     transform: scale(0);
     transform-origin: top right;
     transition: transform 0.2s ease;
+    z-index: 4;
 }
 
 .title-date-ellipsis.appear .del-edit {
@@ -316,7 +317,6 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding: em; */
     margin-bottom: 1em;
 }
 
@@ -392,93 +392,3 @@ img {
 .hide {
     display: none;
 }
-/*
-@media only screen and (max-device-width: 780px)  {
-    .main-wrapper {
-        font-size: 2rem;
-        background-color: yellow;
-    }
-
-    .filter-img {
-        width: 10%;
-    }
-
-    .header {
-        font-size: 2.5rem;
-    }
-
-    .filter p {
-        font-size: 1.3rem;
-    }
-
-    .filter .title-filter-section input {
-        font-size: 1.7rem;
-    }
-
-    .filter .month-filter-section .calender {
-    height: 3.1rem;
-    font-size: 1.3rem;
-    }
-
-    .title {
-        font-size: 1.6rem;
-    }
-
-    .date {
-        font-size: 1.2rem;
-    }
-
-    .elipsis {
-        width: 15%;
-    }
-
-    .description {
-        font-size: 1.5rem;
-    }
-
-    .toggle {
-        font-size: 1.6rem;
-    }
-    
-    .toggle img {
-        width: 2rem;
-    }
-
-    #form {
-        font-size: 1.7rem;
-    }
-
-    .close-btn {
-        width: 2rem;
-    }
-
-    #form input, #text-area {
-        font-size: 1.4rem;
-    }
-
-    .add {
-        width: 3rem;
-    }
-}
-
-
-`<li class="note-wrapper">
-                            <div class="title-date-ellipsis">
-                                <p class="title">${note.title}</p>
-                                <p class="date">${note.date}</p>
-                                <img class="elipsis" src="svg/elipsis.svg"></img>
-                                <div class="del-edit">
-                                    <div class="del toggle">
-                                        <img class="del-img" src="svg/delete.svg" alt="delete" />
-                                        <p>delete</p>
-                                    </div>
-                                    <div class="edit toggle">
-                                        <img class="edit-img" src="svg/edit.svg" alt="edit" />
-                                        <p>edit</p>
-                                    </div>
-                                  </div>
-                            </div>
-                            <p class="description">${note.description}</p> 
-                       </li>`
-
-*/
