@@ -274,6 +274,7 @@ img {
 }
 
 .popup-wrapper {
+    transform: scale(0);
     z-index: 2;
     position: absolute;
     background: rgba(0, 0, 0, 0.1);
@@ -283,7 +284,6 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scale(0);
     transform-origin: bottom;
     transition: transform 0.2s ease;
 }
