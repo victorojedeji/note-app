@@ -215,7 +215,7 @@ img {
     font-size: .9rem;
     background: #272c2d;
     color: #ffffff;
-    overflow: visible;
+    overflow: wrap;
     text-overflow: initial;
     line-height: 1.7;
     max-height: 100*1.7;
@@ -389,6 +389,6 @@ img {
     filter: invert(70%);
 }
 
-.hide {
+/* .hide {
     display: none;
-}
+} */
